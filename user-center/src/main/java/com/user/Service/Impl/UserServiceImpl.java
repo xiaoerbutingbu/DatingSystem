@@ -1,13 +1,13 @@
 package com.user.Service.Impl;
 
-import cn.dev33.satoken.secure.SaSecureUtil;
+
+import cn.dev33.satoken.SaManager;
+import cn.dev33.satoken.stp.StpUtil;
 import com.common.Entity.LoginUser;
-import com.common.constant.UserConstants;
-import com.common.exception.ServiceException;
-import com.common.utils.SaTokenUtils;
 import com.user.Entity.User;
 import com.user.Mapper.UserMapper;
 import com.user.Service.UserService;
+import com.user.configure.SaTokenConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -39,10 +39,16 @@ public class UserServiceImpl implements UserService {
         User user = userMapper.getSysUserByPhone(loginUser.getPhone());
         if (user != null){
             passwordService.validate(user, loginUser.getPassword());
-            SaTokenUtils.login(user);
+            StpUtil.login(user.getUserId());
             return user;
         }
         return user;
+    }
+
+    @Override
+    public void logout() {
+      //  SaTokenUtils.logout(SaTokenUtils.getSysUser());
+        StpUtil.login(StpUtil.getTokenValue());
     }
 
 

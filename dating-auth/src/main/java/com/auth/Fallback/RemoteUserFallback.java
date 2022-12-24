@@ -39,6 +39,11 @@ public class RemoteUserFallback implements FallbackFactory<RemoteUserService> {
             public R<Boolean> register(SysUser sysUser) {
                 return R.fail("用户注册失败："+throwable.getMessage());
             }
+
+            @Override
+            public void logout() {
+                return;
+            }
         };
     }
 }

@@ -6,9 +6,14 @@ spring:
     name: sys-auth
   profiles:
     active: dev
+  redis:
+    host: localhost
+    port: 6379
+    timeout: 5s
+    database: 1
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/yiqing?useUnicode=true&serverTimezone=Asia/Shanghai&characterEncoding=utf8&autoReconnect=true&useSSL=false&allowMultiQueries=true
+    url: jdbc:mysql://localhost:3306/dating?useUnicode=true&serverTimezone=Asia/Shanghai&characterEncoding=utf8&autoReconnect=true&useSSL=false&allowMultiQueries=true
     username: root
     password: cyf159357...
     hikari:
@@ -28,15 +33,9 @@ spring:
           enabled: false
         server-addr: localhost:8848
         file-extension: yml
-
-
-
-  redis:
-    host: localhost
-    port: 6379
-    timeout: 5s
-    database: 1
-
+#        shared-configs:
+#          - dating-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
+#        refresh-enabled: true
 
 
 # Sa-Token配置
@@ -54,17 +53,10 @@ sa-token:
   # token风格
   token-style: simple-uuid
   # 是否输出操作日志
-  is-log: false
+  is-log: true
   # 是否从cookie中读取token
-  is-read-cookie: false
+  is-read-cookie: true
   # 是否从head中读取token
-  is-read-header: true
+  is-read-head: false
   #jwt密钥
   jwt-secret-key: xiaoerxiaoerbutingbu
-  is-write-header: true
-
-
-
-
-
-

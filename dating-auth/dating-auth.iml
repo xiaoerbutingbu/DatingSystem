@@ -124,6 +124,7 @@
     <orderEntry type="library" name="Maven: cn.hutool:hutool-core:5.8.9" level="project" />
     <orderEntry type="library" name="Maven: cn.hutool:hutool-crypto:5.8.9" level="project" />
     <orderEntry type="module" module-name="dating-common" />
+    <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-starter-bootstrap:3.1.4" level="project" />
     <orderEntry type="library" name="Maven: com.github.pagehelper:pagehelper-spring-boot-starter:1.4.5" level="project" />
     <orderEntry type="library" name="Maven: org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.2" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-jdbc:2.7.6" level="project" />

@@ -28,4 +28,6 @@ public interface RemoteUserService {
     @PostMapping("/user/register")
     public R<Boolean> register(SysUser sysUser);
 
+    @GetMapping("/user/logout")
+    public void logout();
 }

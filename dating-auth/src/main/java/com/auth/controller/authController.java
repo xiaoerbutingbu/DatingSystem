@@ -5,11 +5,11 @@ import com.auth.service.impl.AuthService;
 import com.common.Entity.LoginUser;
 import com.common.Entity.SysUser;
 import com.common.domain.R;
-import com.common.utils.SaTokenUtils;
 import com.common.web.controller.BaseController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -49,7 +49,7 @@ public class authController extends BaseController {
 
     @GetMapping("/logout")
     public void logout(){
-        SaTokenUtils.logout(SaTokenUtils.getSysUser());
+        authService.logout();
     }
 
 

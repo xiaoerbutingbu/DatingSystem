@@ -3,8 +3,6 @@ package com.user.controller;
 import cn.dev33.satoken.annotation.SaCheckPermission;
 import com.common.Entity.LoginUser;
 import com.common.domain.R;
-import com.common.exception.ServiceException;
-import com.common.utils.SaTokenUtils;
 import com.common.web.controller.BaseController;
 import com.common.web.domain.AjaxResult;
 import com.user.Entity.User;
@@ -45,8 +43,10 @@ public class UserController extends BaseController {
         return R.fail(false);
     }
 
-
-
+    @GetMapping("logout")
+    public void logout(){
+        userService.logout();
+    }
 
 
     @GetMapping("/isLogin")
@@ -59,7 +59,7 @@ public class UserController extends BaseController {
     @GetMapping("/alter")
     public AjaxResult alter(){
         System.out.println("userController alter");
-        System.out.println(SaTokenUtils.getSaSession());
+
         return toAjax(1);
     }
 

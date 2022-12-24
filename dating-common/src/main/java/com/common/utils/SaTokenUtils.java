@@ -1,5 +1,6 @@
 package com.common.utils;
 
+import cn.dev33.satoken.SaManager;
 import cn.dev33.satoken.context.SaHolder;
 import cn.dev33.satoken.session.SaSession;
 import cn.dev33.satoken.stp.StpUtil;
@@ -16,10 +17,8 @@ import java.util.List;
  * @Author : CYF
  * @Software : IntelliJ IDEA
  */
-public abstract class SaTokenUtils {
+public class SaTokenUtils {
 
-
-    public static final String JOIN_CODE = ":";
 
     public static final String SYS_USER_KEY = "SysUser";
 
@@ -31,7 +30,9 @@ public abstract class SaTokenUtils {
         return getSysUser().getPermission();
     }
 
-
+    static {
+        System.out.println("SaTokenUtils:\t\t\n"+ SaManager.getConfig());
+    }
     public static void login(SysUser sysUser){
         SaHolder.getStorage().set(SYS_USER_KEY,sysUser);
         StpUtil.login(sysUser.getUserId(),sysUser.getDeviceType());

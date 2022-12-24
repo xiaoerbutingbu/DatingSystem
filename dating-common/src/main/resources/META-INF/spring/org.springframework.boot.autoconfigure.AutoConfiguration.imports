@@ -1,4 +1,3 @@
 com.common.redis.configure.RedisConfig
 com.common.redis.service.RedisService
-com.common.exception.SaTokenException
-com.common.SaToken.StpInterfaceImpl
+

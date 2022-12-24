@@ -31,6 +31,10 @@ public class AuthService {
 
     private final String text = UserConstants.TEXT;
 
+    public void logout(){
+        remoteUserService.logout();
+    }
+
     public R<LoginUser> login(LoginUser loginUser){
 
         if(StringUtils.isAnyBlank(loginUser.getPhone(),loginUser.getPassword())){

@@ -28,7 +28,7 @@ public class SaTokenConfigure {
                 .setAuth(obj->{
 
                     //登录校验
-                    SaRouter.match("/auth/**").notMatch("/auth/login").notMatch("/auth/register").check(r -> StpUtil.checkLogin());
+                    SaRouter.match("/auth/**").notMatch("/auth/login").notMatch("/auth/register").notMatch("/auth/logout").check(r -> StpUtil.checkLogin());
                     //SaRouter.match("/**",r-> StpUtil.checkLogin());
                     //SaRouter.match("/auth/**","/auth/login",r-> StpUtil.checkLogin());
                     SaRouter.match("/user/**",r -> StpUtil.checkRoleOr("user","system"));

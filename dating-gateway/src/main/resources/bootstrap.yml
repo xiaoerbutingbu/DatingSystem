@@ -15,7 +15,6 @@ spring:
             - Path=/auth/**
           filters:
             - StripPrefix=1
-          
         - id: user
           uri: lb://user-center
           predicates:
@@ -33,17 +32,9 @@ spring:
         file-extension: yml
         import-check:
           enabled: false
-  redis:
-    host: localhost
-    port: 6379
-    timeout: 5s
-
-
-#    sentinel:
-#      transport:
-#        dashboard: localhost:9999
-#        port: 8719
-
+#        shared-configs:
+#          - dating-${spring.application.name}.${spring.cloud.nacos.config.file-extension}
+#        refresh-enabled: true
 
 # Sa-Token配置
 sa-token:
@@ -60,14 +51,23 @@ sa-token:
   # token风格
   token-style: simple-uuid
   # 是否输出操作日志
-  is-log: false
+  is-log: true
   # 是否从cookie中读取token
-  is-read-cookie: false
+  is-read-cookie: true
   # 是否从head中读取token
-  is-read-header: true
+  is-read-head: false
   #jwt密钥
   jwt-secret-key: xiaoerxiaoerbutingbu
-  is-write-header: true
+
+
+
+#    sentinel:
+#      transport:
+#        dashboard: localhost:9999
+#        port: 8719
+
+
+
 
 
 

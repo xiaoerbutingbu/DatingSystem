@@ -1,12 +1,7 @@
 package com.common.SaToken;
 
 
-import cn.dev33.satoken.interceptor.SaInterceptor;
-import cn.dev33.satoken.jwt.StpLogicJwtForSimple;
-import cn.dev33.satoken.stp.StpLogic;
-import org.springframework.context.annotation.Bean;
-import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
 
 
 /**
@@ -16,17 +11,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
  * @Author : CYF
  * @Software : IntelliJ IDEA
  */
-public class SaTokenConfig implements WebMvcConfigurer {
-
-    @Bean
-    public StpLogic getStpLogic(){
-        return new StpLogicJwtForSimple();
-    }
+public class SaTokenConfig  {
 
 
-    @Override
-    public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(new SaInterceptor())
-                .addPathPatterns("/**");
-    }
 }

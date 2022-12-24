@@ -15,4 +15,6 @@ public interface UserService {
     public int register(User user);
 
     public User login(LoginUser loginUser);
+
+    public void logout();
 }
