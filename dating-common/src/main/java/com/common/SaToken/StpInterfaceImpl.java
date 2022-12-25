@@ -24,7 +24,7 @@ public class StpInterfaceImpl implements StpInterface {
     @Override
     public List<String> getRoleList(Object o, String s) {
         List<String > res = new ArrayList<>();
-        //res.add("user");
+        res.add("user");
         return res;
     }
 }

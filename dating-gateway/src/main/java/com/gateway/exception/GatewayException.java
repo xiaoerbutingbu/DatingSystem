@@ -19,8 +19,8 @@ import reactor.core.publisher.Mono;
  * @Author : CYF
  * @Software : IntelliJ IDEA
  */
-@Configuration
-@Order(-1)
+
+
 public class GatewayException implements ErrorWebExceptionHandler {
 
     @Override
@@ -38,8 +38,6 @@ public class GatewayException implements ErrorWebExceptionHandler {
         }
         else if (ex instanceof NotPermissionException){
             msg = "没有权限:"+ex.getMessage();
-        }else if (ex instanceof SaTokenException){
-            msg = "gateway 未能读取到有效Token";
         }
         else if (ex instanceof NotFoundException){
             msg = "gateway 服务未找到";
@@ -49,7 +47,9 @@ public class GatewayException implements ErrorWebExceptionHandler {
         }
         else if (ex instanceof DisableLoginException){
             msg = "账号已经被封禁";
-
+        }
+        else if (ex instanceof SaTokenException){
+            msg = "gateway 未能读取到有效Token";
         }
         else {
             msg = "gateway 内部服务器错误";

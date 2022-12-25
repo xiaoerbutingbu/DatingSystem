@@ -37,4 +37,5 @@ public class SaTokenException   {
     public R<?> ServiceException(ServiceException e){
        return R.fail(0,e.getMessage());
     }
+
 }

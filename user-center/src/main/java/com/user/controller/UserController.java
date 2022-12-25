@@ -1,6 +1,7 @@
 package com.user.controller;
 
 import cn.dev33.satoken.annotation.SaCheckPermission;
+import cn.dev33.satoken.annotation.SaCheckRole;
 import com.common.Entity.LoginUser;
 import com.common.domain.R;
 import com.common.web.controller.BaseController;
@@ -43,10 +44,6 @@ public class UserController extends BaseController {
         return R.fail(false);
     }
 
-    @GetMapping("logout")
-    public void logout(){
-        userService.logout();
-    }
 
 
     @GetMapping("/isLogin")

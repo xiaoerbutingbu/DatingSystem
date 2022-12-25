@@ -16,5 +16,5 @@ public interface UserService {
 
     public User login(LoginUser loginUser);
 
-    public void logout();
+
 }

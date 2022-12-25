@@ -8,6 +8,7 @@ import com.common.constant.UserConstants;
 import com.common.domain.R;
 import com.common.exception.ServiceException;
 import com.common.utils.BeanUtil;
+import com.common.utils.SaTokenUtils;
 import com.common.utils.StringUtils;
 import com.user.Entity.User;
 import com.user.Service.Impl.PasswordService;
@@ -32,7 +33,7 @@ public class AuthService {
     private final String text = UserConstants.TEXT;
 
     public void logout(){
-        remoteUserService.logout();
+        SaTokenUtils.logout();
     }
 
     public R<LoginUser> login(LoginUser loginUser){
@@ -48,6 +49,7 @@ public class AuthService {
             throw new ServiceException("手机不在指定范围");
         }
         R<LoginUser> userR = remoteUserService.login(loginUser);
+        SaTokenUtils.login(userR.getData().getSysUser());
         return userR;
     }
 

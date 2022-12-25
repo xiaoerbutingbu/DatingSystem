@@ -55,6 +55,7 @@
     <orderEntry type="library" name="Maven: org.bouncycastle:bcprov-jdk15on:1.69" level="project" />
     <orderEntry type="library" name="Maven: org.bouncycastle:bcutil-jdk15on:1.69" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-openfeign-core:3.1.4" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-autoconfigure:2.7.6" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-aop:2.7.6" level="project" />
     <orderEntry type="library" name="Maven: org.aspectj:aspectjweaver:1.9.7" level="project" />
     <orderEntry type="library" name="Maven: io.github.openfeign.form:feign-form-spring:3.8.0" level="project" />
@@ -98,31 +99,11 @@
     <orderEntry type="library" name="Maven: io.netty:netty-transport-native-unix-common:4.1.85.Final" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty-codec:4.1.85.Final" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty-transport:4.1.85.Final" level="project" />
+    <orderEntry type="module" module-name="user-center" />
     <orderEntry type="library" name="Maven: mysql:mysql-connector-java:8.0.28" level="project" />
     <orderEntry type="library" name="Maven: com.google.protobuf:protobuf-java:3.11.4" level="project" />
     <orderEntry type="library" name="Maven: com.alibaba:druid-spring-boot-starter:1.2.12" level="project" />
     <orderEntry type="library" name="Maven: com.alibaba:druid:1.2.12" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-autoconfigure:2.7.6" level="project" />
-    <orderEntry type="module" module-name="user-center" />
-    <orderEntry type="library" name="Maven: cn.dev33:sa-token-spring-boot-starter:1.33.0" level="project" />
-    <orderEntry type="library" name="Maven: cn.dev33:sa-token-servlet:1.33.0" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-web:2.7.6" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-json:2.7.6" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.13.4" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.4" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.module:jackson-module-parameter-names:2.13.4" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-tomcat:2.7.6" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.tomcat.embed:tomcat-embed-core:9.0.69" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.tomcat.embed:tomcat-embed-websocket:9.0.69" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-webmvc:5.3.24" level="project" />
-    <orderEntry type="library" name="Maven: cn.dev33:sa-token-dao-redis-jackson:1.33.0" level="project" />
-    <orderEntry type="library" name="Maven: cn.dev33:sa-token-core:1.33.0" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.commons:commons-pool2:2.11.1" level="project" />
-    <orderEntry type="library" name="Maven: cn.dev33:sa-token-jwt:1.33.0" level="project" />
-    <orderEntry type="library" name="Maven: cn.hutool:hutool-jwt:5.8.9" level="project" />
-    <orderEntry type="library" name="Maven: cn.hutool:hutool-json:5.8.9" level="project" />
-    <orderEntry type="library" name="Maven: cn.hutool:hutool-core:5.8.9" level="project" />
-    <orderEntry type="library" name="Maven: cn.hutool:hutool-crypto:5.8.9" level="project" />
     <orderEntry type="module" module-name="dating-common" />
     <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-starter-bootstrap:3.1.4" level="project" />
     <orderEntry type="library" name="Maven: com.github.pagehelper:pagehelper-spring-boot-starter:1.4.5" level="project" />
@@ -154,5 +135,24 @@
     <orderEntry type="library" name="Maven: com.jhlabs:filters:2.0.235-1" level="project" />
     <orderEntry type="library" name="Maven: io.projectreactor:reactor-core:3.4.25" level="project" />
     <orderEntry type="library" name="Maven: org.reactivestreams:reactive-streams:1.0.4" level="project" />
+    <orderEntry type="library" name="Maven: cn.dev33:sa-token-spring-boot-starter:1.33.0" level="project" />
+    <orderEntry type="library" name="Maven: cn.dev33:sa-token-servlet:1.33.0" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-web:2.7.6" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-json:2.7.6" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.13.4" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.4" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.module:jackson-module-parameter-names:2.13.4" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-tomcat:2.7.6" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.tomcat.embed:tomcat-embed-core:9.0.69" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.tomcat.embed:tomcat-embed-websocket:9.0.69" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-webmvc:5.3.24" level="project" />
+    <orderEntry type="library" name="Maven: cn.dev33:sa-token-jwt:1.33.0" level="project" />
+    <orderEntry type="library" name="Maven: cn.dev33:sa-token-core:1.33.0" level="project" />
+    <orderEntry type="library" name="Maven: cn.hutool:hutool-jwt:5.8.9" level="project" />
+    <orderEntry type="library" name="Maven: cn.hutool:hutool-json:5.8.9" level="project" />
+    <orderEntry type="library" name="Maven: cn.hutool:hutool-core:5.8.9" level="project" />
+    <orderEntry type="library" name="Maven: cn.hutool:hutool-crypto:5.8.9" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.commons:commons-pool2:2.11.1" level="project" />
+    <orderEntry type="library" name="Maven: cn.dev33:sa-token-dao-redis-jackson:1.33.0" level="project" />
   </component>
 </module>
