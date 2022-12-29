@@ -12,9 +12,8 @@
                 <result column="updateTime" property="updateTime"></result>
                 <result column="updateBy" property="updateTime"></result>
                 <result column="remark" property="remark"></result>
-                <collection column="permission" property="permission" javaType="java.util.List"
-                            select="getPermissionByUserId"/>
-                <collection column="role" property="roles" javaType="java.util.List"
+                <collection  property="permission" javaType="java.util.List" ofType="string" select="getPermissionByUserId" column="permission"/>
+                <collection column="role" property="roles" javaType="java.util.List" ofType="string"
                             select="getRolesByUserId"/>
         </resultMap>
         
@@ -22,19 +21,19 @@
                 select userId,userName,phone,password from SysUser
         </sql>
 
-        <select id="getRolesByUserId" parameterType="string" resultType="list" resultMap="SysUserResult">
+        <select id="getRolesByUserId" parameterType="java.lang.Long" resultType="java.lang.String" >
                 select role from roleidandrole rr
                     JOIN useridandroleid ur ON rr.roleId = ur.roleId where ur.userId = #{userId}
         </select>
 
-        <select id="getPermissionByUserId" parameterType="string" resultType="list" resultMap="SysUserResult">
+        <select id="getPermissionByUserId" parameterType="java.lang.Long" resultType="java.lang.String" >
                 select permission from permissionIdAndPermission pp
                     JOIN userIdAndPermissionId up ON pp.permissionId = up.permissionId
                     where up.userId = #{userId}
         </select>
 
         <select id="getSysUserByPhone" parameterType="string" resultMap="SysUserResult">
-                select userId,userName,phone,password from SysUser where phone = #{phone}
+                select userId,userName,phone,password,deviceType from SysUser where phone = #{phone}
         </select>
 
         <insert id="insertSysUser" parameterType="com.user.Entity.User">

@@ -35,6 +35,8 @@ public class UserServiceImpl implements UserService {
     @Override
     public User login(LoginUser loginUser) {
         User user = userMapper.getSysUserByPhone(loginUser.getPhone());
+        user.setPermission(userMapper.getPermissionByUserId(user.getUserId()));
+        user.setRoles(userMapper.getRolesByUserId(user.getUserId()));
         if (user != null){
             passwordService.validate(user, loginUser.getPassword());
             return user;

@@ -4,6 +4,7 @@ import cn.dev33.satoken.context.SaHolder;
 import cn.dev33.satoken.reactor.filter.SaReactorFilter;
 import cn.dev33.satoken.router.SaRouter;
 import cn.dev33.satoken.stp.StpUtil;
+import com.common.utils.SaTokenUtils;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -21,12 +22,10 @@ public class SaTokenConfigure {
 
     @Bean
     public SaReactorFilter getSaReactorFilter(){
-
         return new SaReactorFilter()
                 .addInclude("/**")
                 .addExclude("/favicon.ico")
                 .setAuth(obj->{
-
                     //登录校验
                     SaRouter.match("/auth/**").notMatch("/auth/login").notMatch("/auth/register").notMatch("/auth/logout").check(r -> StpUtil.checkLogin());
                     //SaRouter.match("/**",r-> StpUtil.checkLogin());

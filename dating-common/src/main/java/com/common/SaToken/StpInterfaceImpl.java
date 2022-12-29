@@ -1,8 +1,7 @@
 package com.common.SaToken;
 
 import cn.dev33.satoken.stp.StpInterface;
-
-import java.util.ArrayList;
+import com.common.utils.SaTokenUtils;
 import java.util.List;
 
 /**
@@ -16,15 +15,17 @@ public class StpInterfaceImpl implements StpInterface {
 
     @Override
     public List<String> getPermissionList(Object o, String s) {
-        List<String> res = new ArrayList<>();
-        res.add("system");
+        List<String> res = SaTokenUtils.getPermissions();
+        System.out.println("common:getPermissionList\t\t"+res);
+        //res.add("system");
         return res;
     }
 
     @Override
     public List<String> getRoleList(Object o, String s) {
-        List<String > res = new ArrayList<>();
-        res.add("user");
+        List<String > res = SaTokenUtils.getRoles();
+        System.out.println("common:getRoleList\t\t"+res);
+        //res.add("user");
         return res;
     }
 }
